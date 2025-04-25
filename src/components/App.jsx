@@ -1,9 +1,9 @@
-import Header from "./header";
+import Layout from "./Layout";
 
 function App() {
   return (
     <>
-      <Header
+      <Layout
         title={"TOOLS"}
         text={"It`s you site, here you will find what do you need"}
         removeTitle={true}
