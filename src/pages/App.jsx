@@ -4,13 +4,14 @@ import Layout from "../components/Layout";
 import HomePage from "./HomePage";
 import ColorPage from "./ColorsPage";
 import GradientPage from "./GradientPage";
-import { PageTitleProvider } from "../context/PageTitleContext";
+import { PageTitleAndTextProvider } from "../context/PageTitleAndTextContext";
 
 function App() {
   return (
     // envolver la aplicacion con el provider
     // para que el contexto este disponible en toda la aplicacion
-    <PageTitleProvider>
+
+    <PageTitleAndTextProvider>
       <Layout>
         <Routes>
           <Route path="/homePage" element={<HomePage />} />
@@ -20,7 +21,7 @@ function App() {
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </Layout>
-    </PageTitleProvider>
+    </PageTitleAndTextProvider>
   );
 }
 

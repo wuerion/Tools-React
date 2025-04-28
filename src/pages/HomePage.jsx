@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { usePageTitle } from "../context/PageTitleContext"; // importamos el hook
+import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx"; // importamos el hook personalizado para consumir el contexto
 
 function HomePage() {
   // obtiene la funcion para actualizar el titulo del contexto
-  const { setPageTitle } = usePageTitle();
+  const { setPageTitle } = usePageTitleAndText();
+  const { setPageText } = usePageTitleAndText();
 
   // useEffect se ejecura cunado el componente se monta el componente
   useEffect(() => {
@@ -15,13 +16,10 @@ function HomePage() {
 
   // devuelve SOLO el contenido espeecifico de la paguina
   // no el layout completo
-  return (
-    <p className="text-white">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis optio
-      sunt libero hic aliquid non dicta reiciendis sequi qui rerum, voluptate
-      quisquam, suscipit dolorum rem deserunt, voluptates iure quibusdam vitae.
-    </p>
-  );
+  useEffect(() => {
+    setPageText("It`s your site, here you can willl find what do you need.");
+  }, [setPageText]);
+  return <div className="hidden"></div>;
 }
 
 export default HomePage;

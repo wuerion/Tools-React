@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { usePageTitle } from "../context/PageTitleContext.jsx"; // importamos el hook personalizado para consumir el contexto
+import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx"; // importamos el hook personalizado para consumir el contexto
 
 function ColorsPage() {
   // obtiene la funcion para actualizar el titulo del contexto
-  const { setPageTitle } = usePageTitle();
+  const { setPageTitle } = usePageTitleAndText();
+  const { setPageText } = usePageTitleAndText();
 
   // useEffect se ejecura cunado el componente se monta el componente
   useEffect(() => {
@@ -14,15 +15,13 @@ function ColorsPage() {
   }, [setPageTitle]);
   // devuelve SOLO el contenido espeecifico de la paguina
   // no el layout completo
-  return (
-    <p className="text-red-500">
-      {" "}
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex sed eaque
-      molestiae eligendi tenetur, consequatur perspiciatis, dolores itaque
-      laudantium quos in soluta explicabo, perferendis quo pariatur accusamus et
-      nulla omnis!
-    </p>
-  );
+
+  useEffect(() => {
+    setPageText(
+      "Here you can find a wide variety of colors and palettes or create your own palettes. whit them you can create great desings."
+    );
+  }, [setPageText]);
+  return <div className="hidden"></div>;
 }
 
 export default ColorsPage;
