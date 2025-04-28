@@ -1,11 +1,14 @@
 import React from "react";
 import Nav from "./nav.jsx";
-import { usePageTitle } from "../context/PageTitleContext.jsx"; // importamos el hook personalizado para consumir el contexto
+import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx";
 
 // ya no se necesita el prop title para cambiar el titulo de la pagina
-export function Layout({ children, text }) {
+export function Layout({ children }) {
   // usamos el hook para obtener el titulo actual del contexto
-  const { pageTitle } = usePageTitle();
+  const { pageTitle } = usePageTitleAndText();
+
+  const { pageText } = usePageTitleAndText();
+
   return (
     <div className="font-[Allerta] app-container h-dvh">
       {/* contenedor prcincipal, here header or components comunes */}
@@ -21,12 +24,10 @@ export function Layout({ children, text }) {
             </h2>
 
             <h1>
-              Do you need color, gradients, fonts, frameworks, web, plugins
+              Do you need color, gradients, fonts, frameworks, web, plugins?
             </h1>
 
-            <p>
-              {text || "It`s your site, here you will find what do you need"}
-            </p>
+            <p>{pageText}</p>
           </div>
         </div>
 
