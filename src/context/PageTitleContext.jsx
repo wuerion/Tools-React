@@ -2,7 +2,7 @@
 import React, { createContext, useState, useContext, useMemo } from "react";
 
 //1. crear el contexto
-// puede tener un valor imicial opcional ()util para outocompletado o default)
+// puede tener un valor inicial opcional (util para outocompletado o default)
 const PageTitleContex = createContext({
   pageTitle: "TOOLS", //valor por defecto inicial
   setPageTitle: () => {}, // funcion vacia por defecto
@@ -14,10 +14,10 @@ export const PageTitleProvider = ({ children }) => {
 
   // usamos useMemo para asegurarnos que el objeto 'value' no se recree
   //innecesariamente en cada render, optimizando el rendimiento
-  const valu = useMemo(() => ({ pageTitle, setPageTitle }), [pageTitle]);
+  const value = useMemo(() => ({ pageTitle, setPageTitle }), [pageTitle]);
 
   return (
-    <PageTitleContex.Provider value={valu}>
+    <PageTitleContex.Provider value={value}>
       {children} {/* aqui se renderizara el resto de la aplicacion */}
     </PageTitleContex.Provider>
   );
