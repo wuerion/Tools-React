@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 import HomePage from "./HomePage";
 import ColorPage from "./ColorsPage";
+import GradientPage from "./GradientPage";
 import { PageTitleProvider } from "../context/PageTitleContext";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/homePage" element={<HomePage />} />
           <Route path="/colorPage" element={<ColorPage />} />
+          <Route path="/gradientPage" element={<GradientPage />} />
           {/* paguina no encontrada */}
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
