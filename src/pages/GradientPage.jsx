@@ -6,7 +6,13 @@ function GradientPage() {
   useEffect(() => {
     setPageTitle("GRADIENTS");
   }, [setPageTitle]);
-  return <div>GradientPage</div>;
+  return (
+    <p className="text-white">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis optio
+      sunt libero hic aliquid non dicta reiciendis sequi qui rerum, voluptate
+      quisquam, suscipit dolorum rem deserunt, voluptates iure quibusdam vitae.
+    </p>
+  );
 }
 
 export default GradientPage;
