@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx"; // importamos el hook personalizado para consumir el contexto
+import CardColorSelect from "../components/componets/ColorPage/CardColorSelect.jsx";
 
 function ColorsPage() {
   // obtiene la funcion para actualizar el titulo del contexto
   const { setPageTitle } = usePageTitleAndText();
   const { setPageText } = usePageTitleAndText();
+  const { setMenuIs } = usePageTitleAndText();
 
   // useEffect se ejecura cunado el componente se monta el componente
   useEffect(() => {
@@ -21,7 +23,11 @@ function ColorsPage() {
       "Here you can find a wide variety of colors and palettes or create your own palettes. whit them you can create great desings."
     );
   }, [setPageText]);
-  return <div className="hidden"></div>;
+
+  useEffect(() => {
+    setMenuIs(false);
+  }, [setMenuIs]);
+  return <CardColorSelect />;
 }
 
 export default ColorsPage;
