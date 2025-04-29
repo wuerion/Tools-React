@@ -5,6 +5,7 @@ function HomePage() {
   // obtiene la funcion para actualizar el titulo del contexto
   const { setPageTitle } = usePageTitleAndText();
   const { setPageText } = usePageTitleAndText();
+  const { setMenuIs } = usePageTitleAndText();
 
   // useEffect se ejecura cunado el componente se monta el componente
   useEffect(() => {
@@ -19,6 +20,9 @@ function HomePage() {
   useEffect(() => {
     setPageText("It`s your site, here you can willl find what do you need.");
   }, [setPageText]);
+  useEffect(() => {
+    setMenuIs(true);
+  }, [setMenuIs]);
   return <div className="hidden"></div>;
 }
 
