@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./nav.jsx";
+import NavOnlyHome from "./NavOnlyHome.jsx"; // importamos el componente de navegacion
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx";
 
 // ya no se necesita el prop title para cambiar el titulo de la pagina
@@ -8,6 +9,8 @@ export function Layout({ children }) {
   const { pageTitle } = usePageTitleAndText();
 
   const { pageText } = usePageTitleAndText();
+
+  const { menuIs } = usePageTitleAndText();
 
   return (
     <div className="font-[Allerta] app-container h-dvh">
@@ -31,7 +34,9 @@ export function Layout({ children }) {
           </div>
         </div>
 
-        <Nav />
+        {menuIs && <Nav />}
+        {!menuIs && <NavOnlyHome />}
+        {console.log("menuIs", menuIs)}
 
         {/* contenedor principal, aqui se renderizan los componentes de la ruta activa*/}
 
