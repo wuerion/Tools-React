@@ -36,7 +36,6 @@ export function Layout({ children }) {
 
         {menuIs && <Nav />}
         {!menuIs && <NavOnlyHome />}
-        {console.log("menuIs", menuIs)}
 
         {/* contenedor principal, aqui se renderizan los componentes de la ruta activa*/}
 
