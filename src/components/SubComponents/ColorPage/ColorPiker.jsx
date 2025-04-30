@@ -154,7 +154,7 @@ function ColorPiker() {
   // Usamos H=30 (Naranja), S=0.6 (Menos saturado)
   const brownScale = generateColorScale(30, 0.6, numColores);
   return (
-    <section className=" w-full h-full grid grid-cols-20  colorPiker">
+    <section className=" w-full h-full grid grid-cols-20 colorPiker">
       <div className="GrayGroup">
         <BoxColor color={grayScale} />
       </div>
