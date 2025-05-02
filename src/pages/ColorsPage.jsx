@@ -28,11 +28,7 @@ function ColorsPage() {
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);
-  return (
-    <div>
-      <ColorPiker />
-    </div>
-  );
+  return <ColorPiker />;
 }
 
 export default ColorsPage;
