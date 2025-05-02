@@ -30,7 +30,6 @@ function ColorsPage() {
   }, [setMenuIs]);
   return (
     <div>
-      <CardColorSelect hexa={"00FFFF"} />
       <ColorPiker />
     </div>
   );
