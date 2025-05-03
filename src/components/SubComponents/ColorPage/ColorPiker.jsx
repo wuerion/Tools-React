@@ -4,6 +4,7 @@ import CardColorSelect from "./CardColorSelect";
 
 function ColorPiker() {
   const [selectedColor, setSelectedColor] = useState("");
+  const [selectColor, setSelectColor] = useState("");
 
   // El siguiente código genera una serie de scales de colores en formato hexadecimal, desde el más claro al más oscuro, utilizando el modelo de color HSL (Hue, Saturation, Lightness). La función `generateColorScale` toma un matiz (hue), saturación y número de pasos para crear una scale de colores. También se incluye una función para generar una scale de grises.
 
@@ -34,9 +35,13 @@ function ColorPiker() {
     }
 
     // Convertir a [0, 255] y redondear
+    // console.log([
+    //   Math.round(r * 255),
+    //   Math.round(g * 255),
+    //   Math.round(b * 255),
+    // ]);
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
   }
-
   /**
    * Convierte un componente de color (0-255) a su representación hexadecimal de dos dígitos.
    */
@@ -111,68 +116,148 @@ function ColorPiker() {
   const brownScale = generateColorScale(30, 0.6, numColores);
   return (
     <section>
-      <CardColorSelect hexa={selectedColor} />
+      <CardColorSelect hexa={selectedColor} rgb={selectColor} />
       <div className="w-full h-full grid grid-cols-20">
         {/* Pasa setSelectedColor a cada BoxColor */}
         <div className="GrayGroup">
-          <BoxColor color={grayScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={grayScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="RedGroup">
-          <BoxColor color={redScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={redScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="OrangeGroup">
-          <BoxColor color={orangeScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={orangeScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="YellowGroup">
-          <BoxColor color={yellowScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={yellowScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="LimeGroup">
-          <BoxColor color={limeScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={limeScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="GreenGroup">
-          <BoxColor color={greenScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={greenScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="GreenSpringGroup">
-          <BoxColor color={greenSpringScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={greenSpringScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="CianGroup">
-          <BoxColor color={cianScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={cianScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="SkyBlueGroup">
-          <BoxColor color={skyBlueScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={skyBlueScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="BlueGroup">
-          <BoxColor color={blueScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={blueScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="VioletGroup">
-          <BoxColor color={violetScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={violetScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="MagentaGroup">
-          <BoxColor color={magentaScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={magentaScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="PinkGroup">
-          <BoxColor color={pinkScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={pinkScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="TomatoRedGroup">
-          <BoxColor color={tomatoRedScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={tomatoRedScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="GoldGroup">
-          <BoxColor color={goldScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={goldScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="SeaGreenGroup">
-          <BoxColor color={seaGreenScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={seaGreenScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="BlueCobalt">
-          <BoxColor color={blueCobaltScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={blueCobaltScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="PurpleGroup">
-          <BoxColor color={purpleScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={purpleScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="HotPinkGroup">
-          <BoxColor color={hotPinkScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={hotPinkScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
         <div className="BrownGroup">
-          <BoxColor color={brownScale} onColorSelect={setSelectedColor} />
+          <BoxColor
+            color={brownScale}
+            onColorSelect={setSelectedColor}
+            onColorSelec={setSelectColor}
+          />
         </div>
       </div>
     </section>
