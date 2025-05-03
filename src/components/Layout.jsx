@@ -13,7 +13,7 @@ export function Layout({ children }) {
   const { menuIs } = usePageTitleAndText();
 
   return (
-    <div className="font-[Allerta] app-container h-dvh">
+    <div className="font-[Allerta] app-container">
       {/* contenedor prcincipal, here header or components comunes */}
 
       <div className="text-center text-sm p-5">
