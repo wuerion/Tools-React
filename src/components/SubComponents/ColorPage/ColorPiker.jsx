@@ -255,10 +255,31 @@ function ColorPiker() {
         </div>
       </div>
       <div>
-        <ColorLine color={grayScale} nameColor={"Gray Scale"} />
-        <ColorLine color={redScale} nameColor={"Red Scale"} />
-        <ColorLine color={orangeScale} nameColor={"Orange Scale"} />
-        <ColorLine color={seaGreenScale} nameColor={"Sea Green Scale"} />
+        <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth snap-x">
+          <ColorLine color={grayScale} nameColor={"Gray Scale"} />
+          <ColorLine color={redScale} nameColor={"Red Scale"} />
+          <ColorLine color={orangeScale} nameColor={"Orange Scale"} />
+          <ColorLine color={yellowScale} nameColor={"Yellow Scale"} />
+          <ColorLine color={limeScale} nameColor={"Lime Scale"} />
+          <ColorLine color={greenScale} nameColor={"Green Scale"} />
+          <ColorLine
+            color={greenSpringScale}
+            nameColor={"Green Spring Scale"}
+          />
+          <ColorLine color={cianScale} nameColor={"Cian Scale"} />
+          <ColorLine color={skyBlueScale} nameColor={"Sky Blue Scale"} />
+          <ColorLine color={blueScale} nameColor={"Blue Scale"} />
+          <ColorLine color={violetScale} nameColor={"Violet Scale"} />
+          <ColorLine color={magentaScale} nameColor={"Magenta Scale"} />
+          <ColorLine color={pinkScale} nameColor={"Pink Scale"} />
+          <ColorLine color={tomatoRedScale} nameColor={"Tomato Red Scale"} />
+          <ColorLine color={goldScale} nameColor={"Gold Scale"} />
+          <ColorLine color={seaGreenScale} nameColor={"Sea Green Scale"} />
+          <ColorLine color={blueCobaltScale} nameColor={"Blue Cobalt Scale"} />
+          <ColorLine color={purpleScale} nameColor={"Purple Scale"} />
+          <ColorLine color={hotPinkScale} nameColor={"Hot Pink Scale"} />
+          <ColorLine color={brownScale} nameColor={"Brown Scale"} />
+        </div>
       </div>
     </section>
   );
