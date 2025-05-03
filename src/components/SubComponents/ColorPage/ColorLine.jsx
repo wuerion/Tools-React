@@ -4,33 +4,32 @@ import React, { createElement } from "react";
 
 function ColorLine({ color, nameColor }) {
   return (
-    <div className="mt-5">
-      <p className="text-center text-white">{nameColor}</p>
-      <div className="flex items-end  w-auto -mx-5 my-5 flex-col gap-2.5">
+    <div className="w-full">
+      <p className="text-center my-5 text-lg text-white">{nameColor}</p>
+      <div className="flex items-end w-full flex-col gap-2.5">
         {color.map((col, i) =>
           createElement(
             "div",
             {
               key: i,
               className:
-                "text-white w-4/5 flex border border-white border-r-0 py-1 pl-1",
-              id: col,
+                "text-white w-full flex border border-white border-r-0 py-1 pl-1",
             },
             createElement("div", {
-              className: "w-5 h-12 min-w-[20px]",
+              className: "w-5 h-14 min-w-[20px]",
               style: { background: col },
             }),
             createElement(
               "div",
               {
                 className:
-                  "bg-[#1D1D1D] flex flex-col items-start justify-end px-2 w-[110px]",
+                  "bg-[#1D1D1D] flex flex-col items-start justify-end px-2 min-w-5 w-[100px]",
               },
               createElement("p", {}, "HEXA"),
               createElement("p", {}, col)
             ),
             createElement("div", {
-              className: "w-full h-12 w-full",
+              className: "w-full h-14 w-full",
               style: { background: col },
             }),
             null
