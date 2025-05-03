@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BoxColor from "./BoxColor";
 import CardColorSelect from "./CardColorSelect";
+import ColorLine from "./ColorLine";
 
 function ColorPiker() {
   const [selectedColor, setSelectedColor] = useState("");
@@ -33,13 +34,6 @@ function ColorPiker() {
       g = hue2rgb(p, q, hNormalized);
       b = hue2rgb(p, q, hNormalized - 1 / 3);
     }
-
-    // Convertir a [0, 255] y redondear
-    // console.log([
-    //   Math.round(r * 255),
-    //   Math.round(g * 255),
-    //   Math.round(b * 255),
-    // ]);
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
   }
   /**
@@ -259,6 +253,12 @@ function ColorPiker() {
             onColorSelec={setSelectColor}
           />
         </div>
+      </div>
+      <div>
+        <ColorLine color={grayScale} nameColor={"Gray Scale"} />
+        <ColorLine color={redScale} nameColor={"Red Scale"} />
+        <ColorLine color={orangeScale} nameColor={"Orange Scale"} />
+        <ColorLine color={seaGreenScale} nameColor={"Sea Green Scale"} />
       </div>
     </section>
   );
