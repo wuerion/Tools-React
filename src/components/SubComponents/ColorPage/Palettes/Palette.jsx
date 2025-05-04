@@ -17,13 +17,11 @@ function Palette({
   // function for copy palet
   //? podemos ingresar los colores de la paleta en un arrar dentro de otro array, le asignamos al array un tipo de ID con el map lo buscamos y hacemos considir el ID con el num del array (el primer array va atener el ID 0)
 
-  const handleClick = (color1, color2, color3, colo4) => {
+  const handleClick = (color1, color2, color3, color4) => {
     onPaletteSelect1(color1);
     onPaletteSelect2(color2);
     onPaletteSelect3(color3);
     onPaletteSelect4(color4);
-    navigator.clipboard.writeText(color1, color2, color3, colo4);
-    console.log(color1, color2, color3, colo4);
   };
 
   return (
