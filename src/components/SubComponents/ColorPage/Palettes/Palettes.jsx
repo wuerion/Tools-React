@@ -13,7 +13,6 @@ function palettes() {
           <p>Here you can find variety of colors palettes</p>
         </div>
       </div>
-      <CardPaletteSelect />
       <GalleryPalettes />
     </section>
   );
