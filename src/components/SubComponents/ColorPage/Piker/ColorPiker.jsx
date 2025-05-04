@@ -254,7 +254,7 @@ function ColorPiker() {
           />
         </div>
       </div>
-      <div className="my-8">
+      <div className="my-8#C9FFF2">
         <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth snap-x">
           <ColorLine color={grayScale} nameColor={"Gray Scale"} />
           <ColorLine color={redScale} nameColor={"Red Scale"} />
