@@ -31,35 +31,50 @@ function GalleryPalettes() {
           color2={"FFEBB7"}
           color3={"FFF4E1"}
           color4={"9DDCDC"}
-          onPaletteSelect={setSelectedPaletteColor1}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
         />
         <Palette
           color1={"ddd9d0"}
           color2={"a59094"}
           color3={"906f70"}
           color4={"675b5c"}
-          onPaletteSelect={setSelectedPaletteColor1}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
         />
         <Palette
           color1={"9a7c6f"}
           color2={"6e4c3e"}
           color3={"6c5b5b"}
           color4={"402810"}
-          onPaletteSelect={setSelectedPaletteColor1}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
         />
         <Palette
           color1={"72929c"}
           color2={"dddad8"}
           color3={"8a8a8a"}
           color4={"535c5f"}
-          onPaletteSelect={setSelectedPaletteColor1}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
         />
         <Palette
           color1={"94FFFF"}
           color2={"0DFFC3"}
           color3={"005128"}
           color4={"799AFF"}
-          onPaletteSelect={setSelectedPaletteColor1}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
         />
       </div>
     </div>
