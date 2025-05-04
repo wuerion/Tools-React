@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-function CardPaletteSelect() {
+function CardPaletteSelect({ color1, color2, color3, color4 }) {
   return (
     <div className="bg-linear-180 from-[#FFFFFF] to-[#1D1D1D] p-[1px] my-5 h-14">
       <div className="bg-[#1D1D1D] flex items-center justify-evenly h-full text-white">
         <p>Palettes:</p>
-        <div className="w-9 h-9 rounded-lg bg-[#E67A7A]"></div>
-        <div className="w-9 h-9 rounded-lg bg-[#FFEBB7]"></div>
-        <div className="w-9 h-9 rounded-lg bg-[#FFF4E1]"></div>
-        <div className="w-9 h-9 rounded-lg bg-[#9DDCDC]"></div>
+        <div
+          className="w-9 h-9 rounded-lg"
+          style={{ backgroundColor: color1 }}
+        ></div>
+        <div
+          className="w-9 h-9 rounded-lg"
+          style={{ backgroundColor: color2 }}
+        ></div>
+        <div
+          className="w-9 h-9 rounded-lg"
+          style={{ backgroundColor: color3 }}
+        ></div>
+        <div
+          className="w-9 h-9 rounded-lg"
+          style={{ backgroundColor: color4 }}
+        ></div>
+
         <button>
           <svg
             width="23"
