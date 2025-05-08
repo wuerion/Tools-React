@@ -43,5 +43,5 @@ function CardPaletteSelect({ color1, color2, color3, color4 }) {
     </div>
   );
 }
-
+// #926363,,,
 export default CardPaletteSelect;
