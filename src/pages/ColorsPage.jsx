@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext.jsx"; // importamos el hook personalizado para consumir el contexto
-import CardColorSelect from "../components/SubComponents/ColorPage/CardColorSelect.jsx"; // importamos el componente CardColorSelect
-import ColorPiker from "../components/SubComponents/ColorPage/ColorPiker.jsx";
+import ColorPiker from "../components/SubComponents/ColorPage/Piker/ColorPiker.jsx";
+import Palettes from "../components/SubComponents/ColorPage/Palettes/Palettes.jsx";
 
 function ColorsPage() {
   // obtiene la funcion para actualizar el titulo del contexto
@@ -28,7 +28,12 @@ function ColorsPage() {
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);
-  return <ColorPiker />;
+  return (
+    <div className="flex flex-col gap-5">
+      <ColorPiker />
+      <Palettes />
+    </div>
+  );
 }
 
 export default ColorsPage;
