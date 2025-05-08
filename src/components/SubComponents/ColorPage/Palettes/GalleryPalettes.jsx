@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import CardPaletteSelect from "./CardPaletteSelect";
 import Palette from "./Palette";
 
-function GalleryPalettes() {
+function GalleryPalettes({ children }) {
+  <div className="bg-linear-180 from-[#FFFFFF] to-[#1D1D1D] w-full p-[1px] my-10">
+    <div className="bg-[#1d1d1d] w-full h-96 flex flex-col items-center justify-center text-white gap-10 py-10 px-4">
+      <h2 className="font-[Julius_Sans_One] text-4xl bg-clip-text text-transparent -bg-linear-270 from-[#B3BEFF] to-[#666666]">
+        PALETTES
+      </h2>
+      <p>Here you can find variety of colors palettes</p>
+    </div>
+  </div>;
+
+  // creamos un children
   const [selectedPaletteColor1, setSelectedPaletteColor1] = useState("");
   const [selectedPaletteColor2, setSelectedPaletteColor2] = useState("");
   const [selectedPaletteColor3, setSelectedPaletteColor3] = useState("");
@@ -15,7 +25,7 @@ function GalleryPalettes() {
         color3={selectedPaletteColor3}
         color4={selectedPaletteColor4}
       />
-      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth">
+      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth galleryPalttes">
         <Palette
           color1={"C9FFF2"}
           color2={"799AFF"}
@@ -76,6 +86,7 @@ function GalleryPalettes() {
           onPaletteSelect3={setSelectedPaletteColor3}
           onPaletteSelect4={setSelectedPaletteColor4}
         />
+        {children}
       </div>
     </div>
   );
