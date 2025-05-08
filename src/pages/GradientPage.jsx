@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
+import GalleryGradients from "../components/SubComponents/GradientPage/GalleryGradients";
 function GradientPage() {
   const { setPageTitle } = usePageTitleAndText();
   const { setPageText } = usePageTitleAndText();
+  const { setMenuIs } = usePageTitleAndText();
   useEffect(() => {
     setPageTitle("GRADIENTS");
   }, [setPageTitle]);
@@ -11,7 +13,19 @@ function GradientPage() {
       "Here you can find a wide variety of gradients or create your own. whit wich you can create cool desings."
     );
   }, [setPageText]);
-  return <div className="hidden"></div>;
+  useEffect(() => {
+    setMenuIs(false);
+  }, [setMenuIs]);
+  return (
+    <div>
+      <GalleryGradients
+        color1={"#a4f9c7"}
+        color2={"#acf6f6"}
+        color3={"#a2bbef"}
+        color4={"#bea3ef"}
+      />
+    </div>
+  );
 }
 
 export default GradientPage;
