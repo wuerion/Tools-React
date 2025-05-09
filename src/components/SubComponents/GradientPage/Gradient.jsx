@@ -22,12 +22,18 @@ function Gradient({
   const y = color4 !== undefined && color4 !== null && color4 !== "";
   const z = color5 !== undefined && color5 !== null && color5 !== "";
 
-  const handleClick = (color1, color2, color3, color4, color5) => {
-    onGradientSelect1(color1);
-    onGradientSelect2(color2);
-    onGradientSelect3(color3);
-    onGradientSelect4(color4);
-    onGradientSelect5(color5);
+  const handleClick = (
+    color1,
+    color2,
+    color3 = "",
+    color4 = "",
+    color5 = ""
+  ) => {
+    if (typeof onGradientSelect1 === "function") onGradientSelect1(color1);
+    if (typeof onGradientSelect2 === "function") onGradientSelect2(color2);
+    if (typeof onGradientSelect3 === "function") onGradientSelect3(color3);
+    if (typeof onGradientSelect4 === "function") onGradientSelect4(color4);
+    if (typeof onGradientSelect5 === "function") onGradientSelect5(color5);
   };
 
   const colors = [
