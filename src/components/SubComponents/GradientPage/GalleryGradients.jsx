@@ -30,6 +30,52 @@ function GalleryGradients() {
           onGradientSelect4={setSelectedGradientColor4}
           onGradientSelect5={setSelectedGradientColor5}
         />
+        <Gradient
+          color1={"#14191d"}
+          color2={"#424242"}
+          color3={"#555d77"}
+          color4={"#95a2ad"}
+          onGradientSelect1={setSelectedGradientColor1}
+          onGradientSelect2={setSelectedGradientColor2}
+          onGradientSelect3={setSelectedGradientColor3}
+          onGradientSelect4={setSelectedGradientColor4}
+        />
+        <Gradient
+          color1={"#b3ebff"}
+          color2={"#fbc2eb"}
+          color3={""}
+          color4={""}
+          color5={""}
+          onGradientSelect1={setSelectedGradientColor1}
+          onGradientSelect2={setSelectedGradientColor2}
+          onGradientSelect3={setSelectedGradientColor3}
+          onGradientSelect4={setSelectedGradientColor4}
+          onGradientSelect5={setSelectedGradientColor5}
+        />
+        <Gradient
+          color1={"#e3bfc3"}
+          color2={"#dd7a83"}
+          color3={"#bf9dcd"}
+          color4={"#e1b79f"}
+          color5={""}
+          onGradientSelect1={setSelectedGradientColor1}
+          onGradientSelect2={setSelectedGradientColor2}
+          onGradientSelect3={setSelectedGradientColor3}
+          onGradientSelect4={setSelectedGradientColor4}
+          onGradientSelect5={setSelectedGradientColor5}
+        />
+        <Gradient
+          color1={"#f2dcdc"}
+          color2={"#fef7da"}
+          color3={"#d3d4c7"}
+          color4={"#6e6d69"}
+          color5={"#edd9d7"}
+          onGradientSelect1={setSelectedGradientColor1}
+          onGradientSelect2={setSelectedGradientColor2}
+          onGradientSelect3={setSelectedGradientColor3}
+          onGradientSelect4={setSelectedGradientColor4}
+          onGradientSelect5={setSelectedGradientColor5}
+        />
       </div>
     </div>
   );
