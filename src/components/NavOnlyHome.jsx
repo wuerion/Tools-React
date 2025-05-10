@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavOnlyHome() {
   return (
     <ul className="flex items-center justify-center">
-      <li className="fixed bottom-12">
+      <li className="fixed z-10 bottom-12">
         <Link to="/homePage">
           <svg
             width="40"
