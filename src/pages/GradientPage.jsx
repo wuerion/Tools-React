@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
 import GalleryGradients from "../components/SubComponents/GradientPage/GalleryGradients";
+import CreationGradients from "../components/SubComponents/GradientPage/CreationGradients";
 
 function GradientPage() {
   const { setPageTitle } = usePageTitleAndText();
@@ -20,6 +21,7 @@ function GradientPage() {
   return (
     <div>
       <GalleryGradients />
+      <CreationGradients />
     </div>
   );
 }
