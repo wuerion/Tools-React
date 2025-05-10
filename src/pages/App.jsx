@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import HomePage from "./HomePage";
 import ColorPage from "./ColorsPage";
 import GradientPage from "./GradientPage";
+import FontsPage from "./FontsPage";
 import { PageTitleAndTextProvider } from "../context/PageTitleAndTextContext";
 
 function App() {
@@ -17,8 +18,16 @@ function App() {
           <Route path="/homePage" element={<HomePage />} />
           <Route path="/colorPage" element={<ColorPage />} />
           <Route path="/gradientPage" element={<GradientPage />} />
+          <Route path="/fontsPage" element={<FontsPage />} />
           {/* paguina no encontrada */}
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route
+            path="*"
+            element={
+              <div className="text-red-600 animate-pulse text-lg">
+                404 Not Found
+              </div>
+            }
+          />
         </Routes>
       </Layout>
     </PageTitleAndTextProvider>

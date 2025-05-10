@@ -23,7 +23,7 @@ function HomePage() {
   useEffect(() => {
     setMenuIs(true);
   }, [setMenuIs]);
-  return <div className="hidden"></div>;
+  return <div className="hidden h-dvh"></div>;
 }
 
 export default HomePage;
