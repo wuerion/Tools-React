@@ -24,7 +24,7 @@ function fontsPage() {
       <div>
         <CardFontSelect font={selectedFont} nameFont={selectedFont} />
       </div>
-      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth ">
+      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth">
         <Fonts
           font={"Kite One"}
           nameFont={"Kite One"}
