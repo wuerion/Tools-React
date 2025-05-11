@@ -1,8 +1,8 @@
 import React from "react";
 
-function CardPaletteSelect({ color1, color2, color3, color4 }) {
-  function copy(val1, val2, val3, val4) {
-    navigator.clipboard.writeText([val1, val2, val3, val4]);
+function CardPaletteSelect({ color1, color2, color3, color4, color5 }) {
+  function copy(val1, val2, val3, val4, val5) {
+    navigator.clipboard.writeText([val1, val2, val3, val4, val5]);
   }
   return (
     <div className="bg-linear-180 from-[#FFFFFF] to-[#1D1D1D] p-[1px] my-5 h-14">
@@ -24,8 +24,12 @@ function CardPaletteSelect({ color1, color2, color3, color4 }) {
           className="w-9 h-9 rounded-lg"
           style={{ backgroundColor: color4 }}
         ></div>
+        <div
+          className="w-9 h-9 rounded-lg"
+          style={{ backgroundColor: color5 }}
+        ></div>
         <button
-          onClick={() => copy(color1, color2, color3, color4)}
+          onClick={() => copy(color1, color2, color3, color4, color5)}
           className="border border-white"
         >
           <svg
