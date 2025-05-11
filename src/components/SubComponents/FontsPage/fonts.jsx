@@ -11,7 +11,7 @@ function fonts({ font, nameFont, onFontSelect }) {
         className="bg-[#1D1D1D] flex flex-col items-center justify-center gap-1 h-full text-white p-1"
         onClick={() => handleClick(font, nameFont)}
       >
-        <p style={{ fontFamily: `${font} ` }}>{nameFont}</p>
+        <p style={{ fontFamily: `${font}` }}>{nameFont}</p>
       </div>
     </div>
   );
