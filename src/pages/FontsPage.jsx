@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
-import Fonts from "../components/SubComponents/FontsPage/fonts";
+import Fonts from "../components/SubComponents/FontsPage/Fonts";
 import CardFontSelect from "../components/SubComponents/FontsPage/CardFontSelect";
 function fontsPage() {
   const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
@@ -24,7 +24,7 @@ function fontsPage() {
       <div>
         <CardFontSelect font={selectedFont} nameFont={selectedFont} />
       </div>
-      <div>
+      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth ">
         <Fonts
           font={"Kite One"}
           nameFont={"Kite One"}
