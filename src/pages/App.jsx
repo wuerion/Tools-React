@@ -7,6 +7,7 @@ import GradientPage from "./GradientPage";
 import FontsPage from "./FontsPage";
 import FrameAndLibray from "./FrameAndLibray";
 import { PageTitleAndTextProvider } from "../context/PageTitleAndTextContext";
+import Webs from "./Webs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/gradientPage" element={<GradientPage />} />
           <Route path="/fontsPage" element={<FontsPage />} />
           <Route path="/frameAndLibra" element={<FrameAndLibray />} />
+          <Route path="/webs" element={<Webs />} />
           {/* paguina no encontrada */}
           <Route
             path="*"
