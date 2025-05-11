@@ -18,7 +18,7 @@ function GalleryGradients() {
         color4={selectedGradientColor4}
         color5={selectedGradientColor5}
       />
-      <div>
+      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth">
         <Gradient
           color1={"#a4f9c7"}
           color2={"#acf6f6"}
@@ -75,6 +75,30 @@ function GalleryGradients() {
           onGradientSelect3={setSelectedGradientColor3}
           onGradientSelect4={setSelectedGradientColor4}
           onGradientSelect5={setSelectedGradientColor5}
+        />
+        <Gradient
+          color1={"#01463e"}
+          color2={"#b3e4dc"}
+          color3={"#e5f2ef"}
+          color4={"#c0ded8"}
+          color5={"#f0f8f2"}
+          onGradientSelect1={setSelectedGradientColor1}
+          onGradientSelect2={setSelectedGradientColor2}
+          onGradientSelect3={setSelectedGradientColor3}
+          onGradientSelect4={setSelectedGradientColor4}
+          onGradientSelect5={setSelectedGradientColor5}
+        />
+        <Gradient
+          color1={"#6d678e"}
+          color2={"#f6b5cc"}
+          color3={""}
+          color4={""}
+          color5={""}
+          onGradientSelect1={selectedGradientColor1}
+          onGradientSelect2={selectedGradientColor2}
+          onGradientSelect3={selectedGradientColor3}
+          onGradientSelect4={selectedGradientColor4}
+          onGradientSelect5={selectedGradientColor5}
         />
       </div>
     </div>
