@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import fonts from "./fonts";
+import fonts from "./Fonts";
 
 function CardFontSelect({ font, nameFont }) {
   const [text, setText] = useState("Hello World");
