@@ -9,7 +9,7 @@ function FrameAndLibray() {
   }, [setPageTitle]);
   useEffect(() => {
     setPageText(
-      "Here you can find a wide variety of framework and libreries for programming or developing"
+      "Here you can find a wide variety of framework and libraries for programming or developing"
     );
   }, [setPageText]);
   useEffect(() => {
