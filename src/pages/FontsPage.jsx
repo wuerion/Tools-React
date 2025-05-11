@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
+import Fonts from "../components/SubComponents/FontsPage/fonts";
+import CardFontSelect from "../components/SubComponents/FontsPage/CardFontSelect";
 function fontsPage() {
-  const { setPageTitle } = usePageTitleAndText();
-  const { setPageText } = usePageTitleAndText();
-  const { setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
   useEffect(() => {
     setPageTitle("FONTS");
   }, [setPageTitle]);
@@ -15,7 +15,42 @@ function fontsPage() {
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);
-  return <div>fontsPage</div>;
+
+  // ===
+
+  const [selectedFont, setSelectedFont] = useState("");
+  return (
+    <div>
+      <div>
+        <CardFontSelect font={selectedFont} nameFont={selectedFont} />
+      </div>
+      <div>
+        <Fonts
+          font={"Kite One"}
+          nameFont={"Kite One"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"Julius Sans One"}
+          nameFont={"Julius Sans One"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts font={"Jura"} nameFont={"Jura"} onFontSelect={setSelectedFont} />
+        <Fonts font={"Jua"} nameFont={"Jua"} onFontSelect={setSelectedFont} />
+        <Fonts font={"K2D"} nameFont={"K2D"} onFontSelect={setSelectedFont} />
+        <Fonts
+          font={"Kodchasan"}
+          nameFont={"Kodchasan"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"Borel"}
+          nameFont={"Borel"}
+          onFontSelect={setSelectedFont}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default fontsPage;
