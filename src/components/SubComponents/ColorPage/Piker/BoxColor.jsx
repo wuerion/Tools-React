@@ -26,7 +26,7 @@ function BoxColor({ color, onColorSelect, onColorSelec }) {
           "div",
           {
             key: i,
-            className: "w-[100%] h-5",
+            className: "w-[100%] h-5 ",
             style: { backgroundColor: col },
             id: col,
             onClick: () => handleClick(col), // Llama a handleClick con el color seleccionado
