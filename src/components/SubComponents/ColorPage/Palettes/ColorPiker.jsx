@@ -4,14 +4,14 @@ import { ChromePicker } from "react-color";
 function ColorPiker() {
   const [color, setColor] = useState("#FFFFFF"); // Estado del color seleccionado
 
-  const [piker, setPiker] = useState(false);
+  const [piker, setPiker] = useState(null);
 
   const handleChange = (newColor) => {
     setColor(newColor.hex); // Actualiza el estado con el nuevo color en formato hexadecimal
   };
 
   React.useEffect(() => {
-    if (piker) {
+    if (piker !== null) {
       document.body.style.overflow = "hidden"; // Desactiva el scroll
     } else {
       document.body.style.overflow = ""; // Reactiva el scroll
@@ -26,11 +26,11 @@ function ColorPiker() {
     <div>
       <div className="flex justify-evenly items-center gap-5 border border-white py-5 text-white">
         <p>Palette:</p>
-        {[0, 1, 2, 3].map((index) => (
+        {[0, 1, 2, 3, 4].map((index) => (
           <div
             key={index}
             className="w-9 h-9 rounded-lg border border-white"
-            style={{ backgroundColor: color[index] || "#FFFFFF" }}
+            style={{ backgroundColor: color[index] || "" }}
             onClick={() => setPiker(index)} // Cambia el estado de `piker` al índice del div seleccionado
           ></div>
         ))}
@@ -38,7 +38,8 @@ function ColorPiker() {
           className="border rounded-lg py-2 px-2.5"
           onClick={() => {
             handleSavePalette(color);
-            setColor(["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"]);
+            setColor(["", "", "", "", ""]);
+            setPiker(null);
           }} // Llamamos a la función para guardar
         >
           Save
@@ -48,7 +49,7 @@ function ColorPiker() {
       <div className="w-[100%] mt-1.5 flex justify-center items-center">
         <div className="w-full">
           <ChromePicker
-            color={color[piker] || "#FFFFFF"}
+            color={color[piker] || ""}
             onChange={(newColor) => {
               setColor((prevColors) => {
                 const updatedColors = [...prevColors];
@@ -73,7 +74,7 @@ function ColorPiker() {
 // Guardar la paleta en el localStorage
 function saveToLocalStorage(palette) {
   const savedPalettes = JSON.parse(localStorage.getItem("palettes")) || [];
-  savedPalettes.push(palette);
+  savedPalettes.unshift(palette);
   localStorage.setItem("palettes", JSON.stringify(savedPalettes));
 }
 
@@ -97,19 +98,23 @@ function loadFromLocalStorage() {
         },
         createElement("div", {
           className: "w-9 h-9 rounded-lg",
-          style: { backgroundColor: color[0] || "#FFFFFF" },
+          style: { backgroundColor: color[0] || "" },
         }),
         createElement("div", {
           className: "w-9 h-9 rounded-lg",
-          style: { backgroundColor: color[1] || "#FFFFFF" },
+          style: { backgroundColor: color[1] || "" },
         }),
         createElement("div", {
           className: "w-9 h-9 rounded-lg",
-          style: { backgroundColor: color[2] || "#FFFFFF" },
+          style: { backgroundColor: color[2] || "" },
         }),
         createElement("div", {
           className: "w-9 h-9 rounded-lg",
-          style: { backgroundColor: color[3] || "#FFFFFF" },
+          style: { backgroundColor: color[3] || "" },
+        }),
+        createElement("div", {
+          className: "w-9 h-9 rounded-lg",
+          style: { backgroundColor: color[4] || "" },
         })
       )
     );
