@@ -5,6 +5,7 @@ import HomePage from "./HomePage";
 import ColorPage from "./ColorsPage";
 import GradientPage from "./GradientPage";
 import FontsPage from "./FontsPage";
+import FrameAndLibray from "./FrameAndLibray";
 import { PageTitleAndTextProvider } from "../context/PageTitleAndTextContext";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/colorPage" element={<ColorPage />} />
           <Route path="/gradientPage" element={<GradientPage />} />
           <Route path="/fontsPage" element={<FontsPage />} />
+          <Route path="/frameAndLibra" element={<FrameAndLibray />} />
           {/* paguina no encontrada */}
           <Route
             path="*"
