@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
-import CreateBoxPage from "../components/SubComponents/WebsPage/CreateBoxPage";
+import CreateBox from "../components/SubComponents/WebsPageAndPlugins/CreateBox";
 
 function Webs() {
   const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
@@ -18,46 +18,46 @@ function Webs() {
 
   return (
     <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth">
-      <CreateBoxPage
+      <CreateBox
         title={"MDN"}
         url={"https://developer.mozilla.org/en-US/"}
         img={"/mdn.webp"}
         alt={"MDN"}
         text={"MDN Web Docs"}
       />
-      <CreateBoxPage
+      <CreateBox
         title={"SQUOOSH"}
         url={"https://squoosh.app"}
         img={"/squoosh.webp"}
-        alt={"squoosh"}
+        alt={"Squoosh"}
         text={"Squoosh - image compresor"}
       />
-      <CreateBoxPage
+      <CreateBox
         title={"ICONFINDER"}
         url={"https://www.iconfinder.com/"}
         img={"/iconfinder.webp"}
         alt={"Iconfinder"}
         text={"Iconfinder - Icons"}
       />
-      <CreateBoxPage
+      <CreateBox
         title={"PAGE SPEED INSIGHTS"}
         url={"https://pagespeed.web.dev/"}
         img={"/pageSpeed.webp"}
         alt={"Page Speed Insights"}
         text={"Page Speed Insights"}
       />
-      <CreateBoxPage
+      <CreateBox
         title={"FIGMA"}
         url={"https://www.figma.com/"}
         img={"/figma.webp"}
-        alt={"figma"}
+        alt={"Figma"}
         text={"Figma - Desing"}
       />
-      <CreateBoxPage
+      <CreateBox
         title={"UNSPLASH"}
         url={"https://unsplash.com/"}
         img={"/unsplash.webp"}
-        alt={"unsplash"}
+        alt={"Unsplash"}
         text={"Unsplash - Images"}
       />
     </div>
