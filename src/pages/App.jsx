@@ -8,6 +8,7 @@ import FontsPage from "./FontsPage";
 import FrameAndLibray from "./FrameAndLibray";
 import { PageTitleAndTextProvider } from "../context/PageTitleAndTextContext";
 import Webs from "./Webs";
+import PluginsFigma from "./PluginsFigma";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/fontsPage" element={<FontsPage />} />
           <Route path="/frameAndLibra" element={<FrameAndLibray />} />
           <Route path="/webs" element={<Webs />} />
+          <Route path="/pluginsFigma" element={<PluginsFigma />} />
           {/* paguina no encontrada */}
           <Route
             path="*"
