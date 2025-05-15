@@ -33,8 +33,8 @@ function CardPaletteSelect({ color1, color2, color3, color4, color5 }) {
           className="hover:cursor-pointer"
         >
           <svg
-            width="23"
-            height="26"
+            width="30"
+            height="30"
             viewBox="0 0 23 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
