@@ -50,12 +50,13 @@ function Gradient({
     "div",
     {
       className:
-        "bg-linear-180 from-white to-[#1D1D1D] p-[1px] my-5 w-full h-14",
+        "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#DDDAD8] dark:to-[#1D1D1D] p-[1px] my-5 w-full h-14",
     },
     createElement(
       "div",
       {
-        className: "bg-[#1D1D1D] flex items-center justify-evenly h-full p-2.5",
+        className:
+          "bg-[#DDDAD8] dark:bg-[#1D1D1D] flex items-center justify-evenly h-full p-2.5",
         onClick: () => handleClick(color1, color2, color3, color4, color5),
       },
       createElement("div", {
