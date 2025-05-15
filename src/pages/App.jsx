@@ -18,6 +18,7 @@ function App() {
     <PageTitleAndTextProvider>
       <Layout>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/homePage" element={<HomePage />} />
           <Route path="/colorPage" element={<ColorPage />} />
           <Route path="/gradientPage" element={<GradientPage />} />
@@ -27,7 +28,7 @@ function App() {
           <Route path="/pluginsFigma" element={<PluginsFigma />} />
           {/* paguina no encontrada */}
           <Route
-            path="*"
+            path="/"
             element={
               <div className="text-red-600 animate-pulse text-lg">
                 404 Not Found
