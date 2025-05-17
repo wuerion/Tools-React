@@ -77,10 +77,8 @@ function ColorPiker() {
         </div>
       </div>
 
-      <div>
-        {/* Aquí se muestran las paletas guardadas */}
-        {loadFromLocalStorage()}
-      </div>
+      {/* Aquí se muestran las paletas guardadas */}
+      {loadFromLocalStorage()}
     </div>
   );
 }
