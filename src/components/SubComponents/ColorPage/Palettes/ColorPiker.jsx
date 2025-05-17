@@ -23,8 +23,8 @@ function ColorPiker() {
   }, [piker]);
   // <div className="flex justify-evenly items-center gap-5 border border-white py-5 text-white">
   return (
-    <div>
-      <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] w-full p-[1px] my-10">
+    <div className="flex flex-col items-center justify-center my-4">
+      <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] w-full p-[1px]">
         <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] w-full flex justify-evenly items-center text-[#181818] dark:text-[#DDDAD8] py-5 ">
           <p>Palette:</p>
           {[0, 1, 2, 3, 4].map((index) => (
@@ -60,7 +60,7 @@ function ColorPiker() {
         </div>
       </div>
 
-      <div className="w-[100%] mt-1.5 flex justify-center items-center">
+      <div className=" mt-1.5 flex justify-center items-center w-full md:w-4/5 md:h-4/5">
         <div className="w-full">
           <ChromePicker
             color={color[piker] || ""}
