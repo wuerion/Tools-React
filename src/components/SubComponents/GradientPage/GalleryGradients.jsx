@@ -10,7 +10,7 @@ function GalleryGradients() {
   const [selectedGradientColor5, setSelectedGradientColor5] = useState("");
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <CardGradientSelect
         color1={selectedGradientColor1}
         color2={selectedGradientColor2}
@@ -18,7 +18,7 @@ function GalleryGradients() {
         color4={selectedGradientColor4}
         color5={selectedGradientColor5}
       />
-      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth">
+      <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth md:w-4/5">
         <Gradient
           color1={"#a4f9c7"}
           color2={"#acf6f6"}
