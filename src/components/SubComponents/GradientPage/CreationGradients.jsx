@@ -39,7 +39,7 @@ function CreationGradients() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       {/* card selected palette */}
       <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1d] p-[1px] my-5 w-full ">
         <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-evenly h-full text-[#181818] dark:text-[#DDDAD8] p-1">
@@ -94,7 +94,7 @@ function CreationGradients() {
         </div>
       </div>
 
-      <div>
+      <div className="w-full h-full md:w-4/5 md:h-4/5">
         {/* piker */}
         <ChromePicker
           color={colors[piker]}
@@ -109,7 +109,7 @@ function CreationGradients() {
       </div>
 
       {/* card gallery  */}
-      <div className="">{loadFromLocalStorage()}</div>
+      {loadFromLocalStorage()}
     </div>
   );
 }
@@ -132,7 +132,7 @@ function loadFromLocalStorage() {
         {
           key: index,
           className:
-            "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1d] p-[1px] my-5 w-full ",
+            "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1d] p-[1px] my-5 w-full md:w-4/5",
         },
         createElement(
           "div",
