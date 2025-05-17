@@ -4,7 +4,7 @@ import CreationPalettes from "./CreationPalettes";
 
 function palettes() {
   return (
-    <section>
+    <section className="w-full">
       <CreationPalettes />
       <GalleryPalettes />
       {/* <div className="flex flex-col gap-5"> 
