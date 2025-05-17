@@ -5,7 +5,7 @@ import React, { createElement } from "react";
 function ColorLine({ color, nameColor }) {
   return (
     <div className="w-full">
-      <p className="text-center my-5 text-lg text-[#181818] dark:text-[#DDDAD8]">
+      <p className="text-center py-5 text-lg text-[#181818] dark:text-[#DDDAD8] border-y-[1px] border-white">
         {nameColor}
       </p>
       <div className="flex items-end w-full flex-col gap-2.5">
