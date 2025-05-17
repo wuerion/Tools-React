@@ -23,7 +23,7 @@ function CardGradientSelect({ color1, color2, color3, color4, color5 }) {
   }
 
   return (
-    <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] p-[1px] my-5 ">
+    <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] p-[1px] my-5 w-full ">
       <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-evenly h-full text-[#181818] dark:text-[#DDDAD8] p-1">
         <div className="w-full">
           <div className="flex justify-between p-2">
