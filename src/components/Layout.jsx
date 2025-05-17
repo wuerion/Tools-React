@@ -19,8 +19,8 @@ export function Layout({ children }) {
       <div className="text-center text-sm p-5">
         {/* Ajusta clases si es necesario */}
 
-        <div className="bg-linear-180 from-[#1D1D1D] to-transparent  dark:from-[#FFFFFF] dark:to-[#1D1D1D] w-full p-[1px] mb-10 h-96">
-          <div className="bg-[#DDDAD8] dark:bg-[#1d1d1d] w-full flex flex-col items-center justify-evenly text-[#1B1B1B] dark:text-white h-full gap-10 py-10 px-4">
+        <div className="bg-linear-180 from-[#1D1D1D] to-transparent  dark:from-[#FFFFFF] dark:to-[#1D1D1D] w-full p-[1px] mb-10 h-96 md:h-1/2">
+          <div className="bg-[#DDDAD8] dark:bg-[#1d1d1d] w-full flex flex-col items-center justify-evenly text-[#1B1B1B] dark:text-white h-full md:h-1/2 gap-10 py-10 px-4">
             {/* aqui se renderiza el titulo de la pagina */}
             <h2 className="font-[Julius_Sans_One] text-4xl bg-clip-text text-transparent -bg-linear-270 from-[#B3BEFF] to-[#666666]">
               {pageTitle}
