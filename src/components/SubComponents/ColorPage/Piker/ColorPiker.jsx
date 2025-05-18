@@ -4,7 +4,7 @@ import CardColorSelect from "./CardColorSelect";
 import ColorLine from "./ColorLine";
 
 function ColorPiker() {
-  const [selectedHtml, setSelectedHtml] = useState("");
+  const [selectedHexa, setSelectedHexa] = useState("");
   const [selectedRgb, setSelectedRgb] = useState("");
   const [selectedHsl, setSelectedHsl] = useState("");
 
@@ -113,16 +113,16 @@ function ColorPiker() {
   return (
     <section className="flex flex-col items-center justify-center w-full">
       <CardColorSelect
-        hexa={selectedHtml}
+        hexa={selectedHexa}
         rgb={selectedRgb}
         hsl={selectedHsl}
       />
       <div className="w-full h-full grid grid-cols-20 md:w-4/5 md:h-4/5 md:gap-1.5">
-        {/* Pasa setselectedHtml a cada BoxColor */}
+        {/* Pasa setSelectedHexa a cada BoxColor */}
         <div className="GrayGroup">
           <BoxColor
             color={grayScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -130,7 +130,7 @@ function ColorPiker() {
         <div className="RedGroup">
           <BoxColor
             color={redScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -138,7 +138,7 @@ function ColorPiker() {
         <div className="OrangeGroup">
           <BoxColor
             color={orangeScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -146,7 +146,7 @@ function ColorPiker() {
         <div className="YellowGroup">
           <BoxColor
             color={yellowScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -154,7 +154,7 @@ function ColorPiker() {
         <div className="LimeGroup">
           <BoxColor
             color={limeScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -162,7 +162,7 @@ function ColorPiker() {
         <div className="GreenGroup">
           <BoxColor
             color={greenScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -170,7 +170,7 @@ function ColorPiker() {
         <div className="GreenSpringGroup">
           <BoxColor
             color={greenSpringScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -178,7 +178,7 @@ function ColorPiker() {
         <div className="CianGroup">
           <BoxColor
             color={cianScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -186,7 +186,7 @@ function ColorPiker() {
         <div className="SkyBlueGroup">
           <BoxColor
             color={skyBlueScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -194,7 +194,7 @@ function ColorPiker() {
         <div className="BlueGroup">
           <BoxColor
             color={blueScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -202,7 +202,7 @@ function ColorPiker() {
         <div className="VioletGroup">
           <BoxColor
             color={violetScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -210,7 +210,7 @@ function ColorPiker() {
         <div className="MagentaGroup">
           <BoxColor
             color={magentaScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -218,7 +218,7 @@ function ColorPiker() {
         <div className="PinkGroup">
           <BoxColor
             color={pinkScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -226,7 +226,7 @@ function ColorPiker() {
         <div className="TomatoRedGroup">
           <BoxColor
             color={tomatoRedScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -234,7 +234,7 @@ function ColorPiker() {
         <div className="GoldGroup">
           <BoxColor
             color={goldScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -242,7 +242,7 @@ function ColorPiker() {
         <div className="SeaGreenGroup">
           <BoxColor
             color={seaGreenScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -250,7 +250,7 @@ function ColorPiker() {
         <div className="BlueCobalt">
           <BoxColor
             color={blueCobaltScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -258,7 +258,7 @@ function ColorPiker() {
         <div className="PurpleGroup">
           <BoxColor
             color={purpleScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -266,7 +266,7 @@ function ColorPiker() {
         <div className="HotPinkGroup">
           <BoxColor
             color={hotPinkScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -274,7 +274,7 @@ function ColorPiker() {
         <div className="BrownGroup">
           <BoxColor
             color={brownScale}
-            colorSelectHtml={setSelectedHtml}
+            colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
           />
@@ -282,29 +282,146 @@ function ColorPiker() {
       </div>
       <div className="my-8 w-full md:w-4/5">
         <div className="flex flex-col items-center w-full h-[500px] overflow-scroll scroll-smooth snap-x">
-          <ColorLine color={grayScale} nameColor={"Gray Scale"} />
-          <ColorLine color={redScale} nameColor={"Red Scale"} />
-          <ColorLine color={orangeScale} nameColor={"Orange Scale"} />
-          <ColorLine color={yellowScale} nameColor={"Yellow Scale"} />
-          <ColorLine color={limeScale} nameColor={"Lime Scale"} />
-          <ColorLine color={greenScale} nameColor={"Green Scale"} />
+          <ColorLine
+            color={grayScale}
+            nameColor={"Gray Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={redScale}
+            nameColor={"Red Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={orangeScale}
+            nameColor={"Orange Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={yellowScale}
+            nameColor={"Yellow Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={limeScale}
+            nameColor={"Lime Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={greenScale}
+            nameColor={"Green Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
           <ColorLine
             color={greenSpringScale}
             nameColor={"Green Spring Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
           />
-          <ColorLine color={cianScale} nameColor={"Cian Scale"} />
-          <ColorLine color={skyBlueScale} nameColor={"Sky Blue Scale"} />
-          <ColorLine color={blueScale} nameColor={"Blue Scale"} />
-          <ColorLine color={violetScale} nameColor={"Violet Scale"} />
-          <ColorLine color={magentaScale} nameColor={"Magenta Scale"} />
-          <ColorLine color={pinkScale} nameColor={"Pink Scale"} />
-          <ColorLine color={tomatoRedScale} nameColor={"Tomato Red Scale"} />
-          <ColorLine color={goldScale} nameColor={"Gold Scale"} />
-          <ColorLine color={seaGreenScale} nameColor={"Sea Green Scale"} />
-          <ColorLine color={blueCobaltScale} nameColor={"Blue Cobalt Scale"} />
-          <ColorLine color={purpleScale} nameColor={"Purple Scale"} />
-          <ColorLine color={hotPinkScale} nameColor={"Hot Pink Scale"} />
-          <ColorLine color={brownScale} nameColor={"Brown Scale"} />
+          <ColorLine
+            color={cianScale}
+            nameColor={"Cian Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={skyBlueScale}
+            nameColor={"Sky Blue Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={blueScale}
+            nameColor={"Blue Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={violetScale}
+            nameColor={"Violet Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={magentaScale}
+            nameColor={"Magenta Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={pinkScale}
+            nameColor={"Pink Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={tomatoRedScale}
+            nameColor={"Tomato Red Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={goldScale}
+            nameColor={"Gold Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={seaGreenScale}
+            nameColor={"Sea Green Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={blueCobaltScale}
+            nameColor={"Blue Cobalt Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={purpleScale}
+            nameColor={"Purple Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={hotPinkScale}
+            nameColor={"Hot Pink Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
+          <ColorLine
+            color={brownScale}
+            nameColor={"Brown Scale"}
+            hexa={setSelectedHexa}
+            rgb={setSelectedRgb}
+            hsl={setSelectedHsl}
+          />
         </div>
       </div>
     </section>
