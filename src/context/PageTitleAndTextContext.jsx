@@ -2,30 +2,42 @@ import React, { createContext, useState, useContext, useMemo } from "react";
 
 const pageTexteAndTitleContext = createContext({
   pageTitle: "TOOLS",
-  pageText: "Do you need color, gradients, fonts, frameworks, web, plugins",
+  textTitle: "Do you need color, gradients, fonts, frameworks, web, plugins?",
+  pageText: "It`s your site, here you can willl find what do you need.",
+  description: true,
   menuIs: true,
-  setManuIs: () => {},
   setPageTitle: () => {},
+  setTextTitle: () => {},
   setPageText: () => {},
+  setDescription: () => {},
+  setManuIs: () => {},
 });
 
 export const PageTitleAndTextProvider = ({ children }) => {
   const [pageTitle, setPageTitle] = useState("TOOLS");
   const [pageText, setPageText] = useState(
+    "It`s your site, here you can willl find what do you need."
+  );
+  const [textTitle, setTextTitle] = useState(
     "Do you need color, gradients, fonts, frameworks, web, plugins"
   );
+  const [description, setDescription] = useState(true);
   const [menuIs, setMenuIs] = useState(true);
 
   const value = useMemo(
     () => ({
       pageTitle,
+      textTitle,
       pageText,
+      description,
       menuIs,
       setPageTitle,
+      setTextTitle,
       setPageText,
+      setDescription,
       setMenuIs,
     }),
-    [pageTitle, pageText, setMenuIs]
+    [pageTitle, pageText, textTitle, setDescription, setMenuIs]
   );
 
   return (
