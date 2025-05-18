@@ -1,7 +1,5 @@
 import React, { createElement } from "react";
 
-// TODO: createElement para crear el color en linea, crear el map para recorrer el array de colores y asignarlos
-
 function ColorLine({ color, nameColor, hexa, rgb, hsl }) {
   const handleClick = (selectorColor) => {
     const rgbColor = haxeToRgb(selectorColor);
@@ -37,7 +35,7 @@ function ColorLine({ color, nameColor, hexa, rgb, hsl }) {
       h = s = 0;
     } else {
       const d = max - min;
-      s = l > 0.5 ? d / (d - max - min) : d / (max + min);
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
       switch (max) {
         case r:
           h = (g - b) / d + (g < b ? 6 : 0);
