@@ -5,8 +5,12 @@ function App() {
     <>
       <Layout
         title={"TOOLS"}
+        textTitle={
+          "Do you need color, gradients, fonts, frameworks, web, plugins?"
+        }
         text={"It`s you site, here you will find what do you need"}
         removeTitle={true}
+        descripetion={true}
         menuIs={true}
       />
     </>
