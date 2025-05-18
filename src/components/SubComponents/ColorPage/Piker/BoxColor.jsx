@@ -62,7 +62,7 @@ function BoxColor({ color, colorSelectHtml, colorSelectRgb, colorSelectHsl }) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col md:gap-1.5">
       {/* Mapeo de colores */}
       {color.map((col, i) =>
         createElement(

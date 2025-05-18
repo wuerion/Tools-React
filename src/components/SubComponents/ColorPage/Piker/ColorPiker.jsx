@@ -117,7 +117,7 @@ function ColorPiker() {
         rgb={selectedRgb}
         hsl={selectedHsl}
       />
-      <div className="w-full h-full grid grid-cols-20 md:w-4/5 md:h-4/5">
+      <div className="w-full h-full grid grid-cols-20 md:w-4/5 md:h-4/5 md:gap-1.5">
         {/* Pasa setselectedHtml a cada BoxColor */}
         <div className="GrayGroup">
           <BoxColor
