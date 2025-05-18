@@ -9,7 +9,6 @@ function BoxColor({ color, colorSelectHtml, colorSelectRgb, colorSelectHsl }) {
     colorSelectRgb(rgbColor);
     colorSelectHsl(hslColor);
     navigator.clipboard.writeText([selectedColor, rgbColor, hslColor]); // Copia el color al portapapeles
-    console.log(rgbColor);
   };
   const hexToRgb = (hex) => {
     const bigint = parseInt(hex.slice(1), 16);
