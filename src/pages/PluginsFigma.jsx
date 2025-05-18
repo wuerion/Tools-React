@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
 import CreateBox from "../components/SubComponents/WebsPageAndPlugins/CreateBox";
 function PluginsFigma() {
-  const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
   useEffect(() => {
     setPageTitle("PLUGINS FIGMA");
   }, [setPageTitle]);
@@ -11,6 +12,9 @@ function PluginsFigma() {
       "Here you can find a wide variety of plugins for figma, to create a better desing"
     );
   }, [setPageText]);
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);

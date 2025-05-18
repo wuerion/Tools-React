@@ -3,7 +3,8 @@ import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
 import Fonts from "../components/SubComponents/FontsPage/Fonts";
 import CardFontSelect from "../components/SubComponents/FontsPage/CardFontSelect";
 function fontsPage() {
-  const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
   useEffect(() => {
     setPageTitle("FONTS");
   }, [setPageTitle]);
@@ -12,6 +13,9 @@ function fontsPage() {
       "Here you cand find variety of fonts and try them out, choosing the one that suits you best."
     );
   }, [setPageText]);
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);

@@ -4,9 +4,8 @@ import GalleryGradients from "../components/SubComponents/GradientPage/GalleryGr
 import CreationGradients from "../components/SubComponents/GradientPage/CreationGradients";
 
 function GradientPage() {
-  const { setPageTitle } = usePageTitleAndText();
-  const { setPageText } = usePageTitleAndText();
-  const { setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
   useEffect(() => {
     setPageTitle("GRADIENTS");
   }, [setPageTitle]);
@@ -15,6 +14,9 @@ function GradientPage() {
       "Here you can find a wide variety of gradients or create your own. whit wich you can create cool desings."
     );
   }, [setPageText]);
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);

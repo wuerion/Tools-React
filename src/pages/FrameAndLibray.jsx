@@ -3,7 +3,8 @@ import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
 import BoxFrameLibra from "../components/SubComponents/FrameAndLibra/BoxFrameLibra";
 
 function FrameAndLibray() {
-  const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
   useEffect(() => {
     setPageTitle("FRAMEWORKS AND LIBRARIES");
   }, [setPageTitle]);
@@ -12,6 +13,9 @@ function FrameAndLibray() {
       "Here you can find a wide variety of framework and libraries for programming or developing"
     );
   }, [setPageText]);
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);

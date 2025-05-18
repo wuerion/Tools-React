@@ -5,9 +5,8 @@ import Palettes from "../components/SubComponents/ColorPage/Palettes/Palettes.js
 
 function ColorsPage() {
   // obtiene la funcion para actualizar el titulo del contexto
-  const { setPageTitle } = usePageTitleAndText();
-  const { setPageText } = usePageTitleAndText();
-  const { setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
 
   // useEffect se ejecura cunado el componente se monta el componente
   useEffect(() => {
@@ -24,7 +23,9 @@ function ColorsPage() {
       "Here you can find a wide variety of colors and palettes or create your own palettes. whit them you can create great desings."
     );
   }, [setPageText]);
-
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);

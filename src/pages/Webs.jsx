@@ -3,7 +3,8 @@ import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
 import CreateBox from "../components/SubComponents/WebsPageAndPlugins/CreateBox";
 
 function Webs() {
-  const { setPageTitle, setPageText, setMenuIs } = usePageTitleAndText();
+  const { setPageTitle, setPageText, setDescription, setMenuIs } =
+    usePageTitleAndText();
   useEffect(() => {
     setPageTitle("WEBS");
   }, [setPageTitle]);
@@ -12,6 +13,9 @@ function Webs() {
       "Here you can find a wide variety of websites for programming or developing"
     );
   }, [setPageText]);
+  useEffect(() => {
+    setDescription(false);
+  }, [setDescription]);
   useEffect(() => {
     setMenuIs(false);
   }, [setMenuIs]);
