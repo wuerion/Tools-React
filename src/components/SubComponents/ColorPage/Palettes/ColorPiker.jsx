@@ -60,7 +60,7 @@ function ColorPiker() {
         </div>
       </div>
 
-      <div className=" mt-1.5 flex justify-center items-center w-full md:w-4/5 md:h-4/5">
+      <div className=" mt-1.5 flex justify-center items-center w-full md:w-4/5 md:h-4/5 lg:w-3/5">
         <div className="w-full">
           <ChromePicker
             color={color[piker] || ""}
