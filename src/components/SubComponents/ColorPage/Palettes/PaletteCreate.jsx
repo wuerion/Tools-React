@@ -1,6 +1,6 @@
 import React, { createElement, useState } from "react";
 import { ChromePicker } from "react-color";
-import Notify from "../../../Notification";
+import Notification from "../../../Notification";
 
 function PalatteCreateSub() {
   const [color, setColor] = useState("#FFFFFF"); // Estado del color seleccionado
@@ -80,7 +80,7 @@ function PalatteCreateSub() {
           />
         </div>
       </div>
-      {showNotify && <Notify text="Palette saved!" show={showNotify} />}
+      {showNotify && <Notification text="Palette saved!" show={showNotify} />}
       {/* Aquí se muestran las paletas guardadas */}
       {loadFromLocalStorage()}
     </div>
