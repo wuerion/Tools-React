@@ -34,7 +34,7 @@ function CardPaletteSelect({ color1, color2, color3, color4, color5 }) {
           onClick={() => {
             copy(color1, color2, color3, color4, color5);
             setNotification(true);
-            setTimeout(() => setNotification(false), 2000);
+            setTimeout(() => setNotification(false), 1500);
           }}
           className="hover:cursor-pointer"
         >
