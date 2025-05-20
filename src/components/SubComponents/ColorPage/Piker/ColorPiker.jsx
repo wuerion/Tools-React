@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import BoxColor from "./BoxColor";
 import CardColorSelect from "./CardColorSelect";
 import ColorLine from "./ColorLine";
+import Notification from "../../../Notification";
 
 function ColorPiker() {
   const [selectedHexa, setSelectedHexa] = useState("");
   const [selectedRgb, setSelectedRgb] = useState("");
   const [selectedHsl, setSelectedHsl] = useState("");
+  const [notification, setNotification] = useState("");
 
   // El siguiente código genera una serie de scales de colores en formato hexadecimal, desde el más claro al más oscuro, utilizando el modelo de color HSL (Hue, Saturation, Lightness). La función `generateColorScale` toma un matiz (hue), saturación y número de pasos para crear una scale de colores. También se incluye una función para generar una scale de grises.
 
@@ -110,8 +112,16 @@ function ColorPiker() {
   const purpleScale = generateColorScale(285, 1, numColores);
   const hotPinkScale = generateColorScale(320, 1, numColores);
   const brownScale = generateColorScale(30, 0.6, numColores);
+
+  const showNotification = (text) => {
+    setNotification(text);
+    setTimeout(() => {
+      setNotification("");
+    }, 1500);
+  };
   return (
     <section className="flex flex-col items-center justify-center w-full">
+      {notification && <Notification text={notification} />}
       <CardColorSelect
         hexa={selectedHexa}
         rgb={selectedRgb}
@@ -125,6 +135,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="RedGroup">
@@ -133,6 +144,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="OrangeGroup">
@@ -141,6 +153,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="YellowGroup">
@@ -149,6 +162,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="LimeGroup">
@@ -157,6 +171,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="GreenGroup">
@@ -165,6 +180,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="GreenSpringGroup">
@@ -173,6 +189,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="CianGroup">
@@ -181,6 +198,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="SkyBlueGroup">
@@ -189,6 +207,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="BlueGroup">
@@ -197,6 +216,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="VioletGroup">
@@ -205,6 +225,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="MagentaGroup">
@@ -213,6 +234,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="PinkGroup">
@@ -221,6 +243,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="TomatoRedGroup">
@@ -229,6 +252,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="GoldGroup">
@@ -237,6 +261,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="SeaGreenGroup">
@@ -245,6 +270,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="BlueCobalt">
@@ -253,6 +279,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="PurpleGroup">
@@ -261,6 +288,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="HotPinkGroup">
@@ -269,6 +297,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
         <div className="BrownGroup">
@@ -277,6 +306,7 @@ function ColorPiker() {
             colorSelectHtml={setSelectedHexa}
             colorSelectRgb={setSelectedRgb}
             colorSelectHsl={setSelectedHsl}
+            showNotification={showNotification}
           />
         </div>
       </div>
