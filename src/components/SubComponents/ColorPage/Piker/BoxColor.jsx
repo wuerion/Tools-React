@@ -1,6 +1,12 @@
-import React, { createElement } from "react";
-
-function BoxColor({ color, colorSelectHtml, colorSelectRgb, colorSelectHsl }) {
+import React, { createElement, useState } from "react";
+import Notification from "../../../Notification";
+function BoxColor({
+  color,
+  colorSelectHtml,
+  colorSelectRgb,
+  colorSelectHsl,
+  showNotification,
+}) {
   const handleClick = (selectedColor) => {
     // funcion para seleccionar el color y copiar el (hexa, rgb, hsl)
     const rgbColor = hexToRgb(selectedColor);
@@ -8,7 +14,12 @@ function BoxColor({ color, colorSelectHtml, colorSelectRgb, colorSelectHsl }) {
     colorSelectHtml(selectedColor);
     colorSelectRgb(rgbColor);
     colorSelectHsl(hslColor);
-    navigator.clipboard.writeText([selectedColor, rgbColor, hslColor]); // Copia el color al portapapeles
+    if (showNotification) {
+      showNotification("Color copied");
+    }
+    navigator.clipboard.writeText(
+      [selectedColor, rgbColor, hslColor].join(" | ")
+    ); // Copia el color al portapapeles
   };
   const hexToRgb = (hex) => {
     const bigint = parseInt(hex.slice(1), 16);
