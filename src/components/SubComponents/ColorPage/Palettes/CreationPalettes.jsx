@@ -1,5 +1,5 @@
 import React from "react";
-import ColorCreate from "./ColorPiker";
+import PaletteCreate from "./PaletteCreate";
 
 function CreationPalettes() {
   return (
@@ -12,7 +12,7 @@ function CreationPalettes() {
           <p>Here you can create your own palettes</p>
         </div>
       </div>
-      <ColorCreate />
+      <PaletteCreate />
     </div>
   );
 }
