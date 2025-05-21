@@ -1,13 +1,16 @@
 import { color } from "@uiw/react-color";
 import React, { createElement, useState } from "react";
 import { ChromePicker } from "react-color";
-//
+import Notification from "../../Notification";
+
 function CreationGradients() {
   const [colors, setColors] = useState(["#FFFFFF", "#FFFFFF"]);
-  const [piker, setPiker] = useState(false);
+  const [piker, setPiker] = useState(null);
+  const [notification, setNotification] = useState("");
+  const [notificationText, setNotificationText] = useState("");
   React.useEffect(() => {
     //eliminar el scrrol
-    if (piker !== false) {
+    if (piker !== null) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -22,19 +25,21 @@ function CreationGradients() {
       const gradient = `linear-gradient(90deg, ${colors.join(", ")})`;
       navigator.clipboard.writeText(gradient);
       console.log("Gradient copied:", gradient);
-      setPiker(false);
+      setPiker(null);
       handleSaveGradient(colors);
     };
   }
   // funcion para crear un nuevo (P)
   function newVal() {
-    console.log("newVal");
     if (colors.length < 5) {
-      colors.push("#FFFFFF");
-      setPiker();
-      console.log(colors);
+      setColors([...colors, "#FFFFFF"]);
+      setPiker(colors.length); // Selecciona el nuevo color agregado
+      console.log(piker);
+      console.log(colors.length);
+      setNotification();
+      setNotificationText("New added color");
     } else {
-      console.log("Limit array");
+      setNotificationText("Max 5 colors");
     }
   }
 
@@ -46,7 +51,14 @@ function CreationGradients() {
           <div className="w-full flex justify-between items-center p-2">
             <p>Gradient</p>
             <div className="flex gap-5">
-              <button onClick={newVal} className="hover:cursor-pointer">
+              <button
+                onClick={() => {
+                  newVal();
+                  setNotification(true);
+                  setTimeout(() => setNotification(false), 1500);
+                }}
+                className="hover:cursor-pointer"
+              >
                 <svg
                   width="25"
                   height="25"
@@ -58,7 +70,16 @@ function CreationGradients() {
                   <path d="M0 7V6H6V0H7V6H13V7H7V13H6V7H0Z" />
                 </svg>
               </button>
-              <button onClick={Copy(colors)} className="hover:cursor-pointer">
+              <button
+                onClick={() => {
+                  Copy(colors);
+                  setPiker(null);
+                  setNotification(true),
+                    setTimeout(() => setNotification(false), 1500);
+                  setNotificationText("Gradient copied");
+                }}
+                className="hover:cursor-pointer"
+              >
                 <svg
                   width="25"
                   height="25"
@@ -77,7 +98,9 @@ function CreationGradients() {
               {colors.map((color, index) => (
                 <p
                   key={index}
-                  onClick={() => setPiker(piker === index ? false : index)}
+                  onClick={() => {
+                    setPiker(index), console.log(piker);
+                  }}
                   className="border-b border-[#1D1D1D] dark:border-[#DDDAD8] cursor-pointer"
                 >
                   {color}
@@ -94,7 +117,7 @@ function CreationGradients() {
         </div>
       </div>
 
-      <div className="w-full h-full md:w-4/5 md:h-4/5">
+      <div className="w-full h-full md:w-4/5 md:h-4/5 lg:w-3/5">
         {/* piker */}
         <ChromePicker
           color={colors[piker]}
@@ -110,6 +133,7 @@ function CreationGradients() {
 
       {/* card gallery  */}
       {loadFromLocalStorage()}
+      {notification && <Notification text={notificationText} />}
     </div>
   );
 }
