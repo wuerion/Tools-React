@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import fonts from "./Fonts";
-
+import Notification from "../../Notification";
 function CardFontSelect({ font, nameFont }) {
   const [text, setText] = useState("Hello World");
-
+  const [notification, setNotification] = useState(false);
   function Copy(font) {
     const formattedFont = font.includes(" ") ? font.replace(/ /g, "+") : font;
     navigator.clipboard.writeText(
@@ -12,6 +12,7 @@ function CardFontSelect({ font, nameFont }) {
   }
   return (
     <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] p-[1px] my-5 ">
+      {notification && <Notification text={"Font copied"} />}
       <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-center gap-4 h-full text-[#181818] dark:text-[#DDDAD8] p-2">
         <div className="bg-white/20 w-full flex justify-between px-2 shadow-[0_4px_2px_#DAD7D5] dark:shadow-[0_4px_2px_#181818]">
           <input
@@ -48,7 +49,16 @@ function CardFontSelect({ font, nameFont }) {
                 />
               </svg>
             </a>
-            <button className="cursor-pointer" onClick={() => Copy(font)}>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                Copy(font);
+                setNotification(true);
+                setTimeout(() => {
+                  setNotification(false);
+                }, 1500);
+              }}
+            >
               <svg
                 width="25"
                 height="25"
