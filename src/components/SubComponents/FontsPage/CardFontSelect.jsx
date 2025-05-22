@@ -14,18 +14,26 @@ function CardFontSelect({ font, nameFont }) {
     <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] p-[1px] my-5 ">
       {notification && <Notification text={"Font copied"} />}
       <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-center gap-4 h-full text-[#181818] dark:text-[#DDDAD8] p-2">
-        <div className="bg-white/20 w-full flex justify-between px-2 shadow-[0_4px_2px_#DAD7D5] dark:shadow-[0_4px_2px_#181818]">
-          <input
-            type="text"
-            placeholder="Type something..."
-            className=" w-full h-10 focus:outline-0 rounded-md text-[#181818] dark:text-[#DDDAD8]"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
+        <div className="bg-[#f2f2f2] dark:bg-white/30 w-full flex justify-between rounded-tl-4xl rounded-lg  gap-2 pr-2 shadow-[0_4px_2px_#DAD7D5] dark:shadow-[0_4px_2px_#181818]">
+          <div className="w-full">
+            <input
+              type="text"
+              placeholder="Type something..."
+              title="Type something..."
+              aria-label="Type something..."
+              className=" w-full h-10 pl-5 focus:outline-0 rounded-tl-4xl rounded-br-4xl  text-[#DDDAD8] dark:text-[#181818] bg-[#181818] dark:bg-[#DDDAD8]"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
           <div className="flex items-center gap-4 w-16">
             <a
               href={`https://fonts.google.com/specimen/${font}`}
               target="_blank"
+              title="Google Fonts"
+              aria-label="Google Fonts"
+              rel="noreferrer"
+              className="cursor-pointer"
             >
               <svg
                 width="25"
@@ -51,6 +59,8 @@ function CardFontSelect({ font, nameFont }) {
             </a>
             <button
               className="cursor-pointer"
+              title="Copy"
+              aria-label="Copy"
               onClick={() => {
                 Copy(font);
                 setNotification(true);
