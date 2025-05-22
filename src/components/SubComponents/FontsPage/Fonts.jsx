@@ -10,6 +10,8 @@ function fonts({ font, nameFont, onFontSelect }) {
       <div
         className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-center gap-1 h-8 w-full text-[#181818] dark:text-[#DDDAD8] p-1 cursor-pointer"
         onClick={() => handleClick(font, nameFont)}
+        title="Click to select font"
+        aria-label="Click to select font"
       >
         <p style={{ fontFamily: `${font}` }}>{nameFont}</p>
       </div>
