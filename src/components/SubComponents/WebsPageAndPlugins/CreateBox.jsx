@@ -13,7 +13,7 @@ function CreateBox({ title = "", text = "", url, img, alt, height }) {
           <img
             src={`${img}`}
             alt={`${alt}`}
-            className="w-full h-full object-contain border border-amber-50"
+            className="w-full h-full object-contain"
           />
         </a>
         <p>{text}</p>
