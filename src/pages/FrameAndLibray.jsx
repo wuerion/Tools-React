@@ -66,6 +66,7 @@ function FrameAndLibray() {
               url={item.link}
               img={item.icon}
               alt={item.name}
+              height={"h-[100px]"}
             />
           ))
         ) : (
