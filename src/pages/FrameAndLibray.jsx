@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { usePageTitleAndText } from "../context/PageTitleAndTextContext";
-import BoxFrameLibra from "../components/SubComponents/FrameAndLibra/BoxFrameLibra";
-import ShearchInput from "../components/SubComponents/WebsPageAndPlugins/SearchInput";
+import SearchInput from "../components/SubComponents/WebsPageAndPlugins/SearchInput";
 import CreateBox from "../components/SubComponents/WebsPageAndPlugins/CreateBox";
 import astroSvg from "../assets/astro.svg";
 import reactSvg from "../assets/react.svg";
@@ -55,7 +54,7 @@ function FrameAndLibray() {
 
   return (
     <div>
-      <ShearchInput
+      <SearchInput
         seacrhItem={searchTerm}
         changeSearchItem={handleSearchChange}
       />
