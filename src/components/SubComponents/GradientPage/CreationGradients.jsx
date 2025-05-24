@@ -1,4 +1,3 @@
-import { color } from "@uiw/react-color";
 import React, { createElement, useState } from "react";
 import { ChromePicker } from "react-color";
 import Notification from "../../Notification";
