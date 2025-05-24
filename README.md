@@ -16,6 +16,7 @@ Este proyecto fue creado para desarrolladores/as y diseñadores/as. Aquí podrá
 ## Tecnologías utilizadas
 
 - ⚛️ React
+- React-color(https://casesandberg.github.io/react-color/)
 - 💨 Tailwind CSS
 - ⚡ Vite
 - 📜 JavaScript
@@ -47,7 +48,7 @@ Este proyecto fue creado para desarrolladores/as y diseñadores/as. Aquí podrá
 
 ## Uso
 
-Accede a la aplicación en tu navegador en `http://localhost:5173` y explora las diferentes herramientas disponibles para potenciar tus proyectos.
+Accede a la aplicación en tu navegador en (https://tools-kappa-henna.vercel.app/) y explora las diferentes herramientas disponibles para potenciar tus proyectos.
 
 ## Contribución
 
@@ -59,14 +60,12 @@ Accede a la aplicación en tu navegador en `http://localhost:5173` y explora las
 4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
 
-## Licencia
-
-Este proyecto está bajo la licencia MIT.
-
 ## Contacto
 
-Si tienes dudas, sugerencias o quieres reportar un problema, puedes abrir un issue.
+Si tienes dudas, sugerencias o quieres reportar un problema, puedes abrir un issue o un pull requests.
 
 ---
 
 ¡Explora y potencia tus proyectos con estas herramientas!
+
+---
