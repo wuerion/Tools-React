@@ -37,7 +37,7 @@ function Palette({
         "div",
         {
           className:
-            "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#DDDAD8] dark:to-[#1D1D1d] p-[1px] my-5 w-full h-14",
+            "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#DDDAD8] dark:to-[#1D1D1d] p-[1px] my-5 w-full md:w-4/5 h-14",
         },
         createElement(
           "div",
@@ -48,27 +48,27 @@ function Palette({
           },
           createElement("div", {
             className:
-              "w-9 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
+              "w-2/12 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
             style: { backgroundColor: color1 },
           }),
           createElement("div", {
             className:
-              "w-9 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
+              "w-2/12 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
             style: { backgroundColor: color2 },
           }),
           createElement("div", {
             className:
-              "w-9 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
+              "w-2/12 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
             style: { backgroundColor: color3 },
           }),
           createElement("div", {
             className:
-              "w-9 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
+              "w-2/12 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
             style: { backgroundColor: color4 },
           }),
           createElement("div", {
             className:
-              "w-9 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
+              "w-2/12 h-9 rounded-lg border border-[#1D1D1D] dark:border-[#DDDAD8]",
             style: { backgroundColor: color5 },
           })
         )
