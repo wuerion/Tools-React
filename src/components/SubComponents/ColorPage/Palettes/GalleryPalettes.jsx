@@ -103,6 +103,66 @@ function GalleryPalettes() {
           onPaletteSelect4={setSelectedPaletteColor4}
           onPaletteSelect5={setSelectedPaletteColor5}
         />
+        <Palette
+          color1={"969696"}
+          color2={"a5a5a5"}
+          color3={"858585"}
+          color4={"5f5f5f"}
+          color5={"#3a3a3a"}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
+        <Palette
+          color1={"c4cdd8"}
+          color2={"b0c8db"}
+          color3={"90a5b8"}
+          color4={"738698"}
+          color5={""}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
+        <Palette
+          color1={"f5d5e0"}
+          color2={"6667ab"}
+          color3={"7b337e"}
+          color4={"420d4b"}
+          color5={"#210635"}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
+        <Palette
+          color1={"ffbb94"}
+          color2={"fb9590"}
+          color3={"dc586d"}
+          color4={"a33757"}
+          color5={"#852e4e"}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
+        <Palette
+          color1={"280f17"}
+          color2={"8f0b13"}
+          color3={"efdfc5"}
+          color4={"252b2b"}
+          color5={"#4c4f54"}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
       </div>
     </div>
   );
