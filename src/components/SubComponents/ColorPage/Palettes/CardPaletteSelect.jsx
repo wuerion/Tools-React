@@ -11,23 +11,23 @@ function CardPaletteSelect({ color1, color2, color3, color4, color5 }) {
       <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex items-center justify-evenly h-full text-[#181818] dark:text-[#DDDAD8]">
         <p>Palettes:</p>
         <div
-          className="w-9 h-9 rounded-lg"
+          className="w-[12%] h-9 rounded-lg"
           style={{ backgroundColor: color1 }}
         ></div>
         <div
-          className="w-9 h-9 rounded-lg"
+          className="w-[12%] h-9 rounded-lg"
           style={{ backgroundColor: color2 }}
         ></div>
         <div
-          className="w-9 h-9 rounded-lg"
+          className="w-[12%] h-9 rounded-lg"
           style={{ backgroundColor: color3 }}
         ></div>
         <div
-          className="w-9 h-9 rounded-lg"
+          className="w-[12%] h-9 rounded-lg"
           style={{ backgroundColor: color4 }}
         ></div>
         <div
-          className="w-9 h-9 rounded-lg"
+          className="w-[12%] h-9 rounded-lg"
           style={{ backgroundColor: color5 }}
         ></div>
         <button
