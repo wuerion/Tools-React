@@ -104,7 +104,7 @@ function loadFromLocalStorage() {
       {
         key: index,
         className:
-          "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#DDDAD8] dark:to-[#1D1D1d] p-[1px] my-5 w-full h-14",
+          "bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#DDDAD8] dark:to-[#1D1D1d] p-[1px] my-5 w-full md:w-4/5 h-14",
       },
       createElement(
         "div",
@@ -113,23 +113,23 @@ function loadFromLocalStorage() {
             "bg-[#DDDAD8] dark:bg-[#1D1D1D] flex items-center justify-evenly h-full py-1.5 text-white",
         },
         createElement("div", {
-          className: "w-9 h-9 rounded-lg",
+          className: "w-2/12 h-9 rounded-lg",
           style: { backgroundColor: color[0] || "" },
         }),
         createElement("div", {
-          className: "w-9 h-9 rounded-lg",
+          className: "w-2/12 h-9 rounded-lg",
           style: { backgroundColor: color[1] || "" },
         }),
         createElement("div", {
-          className: "w-9 h-9 rounded-lg",
+          className: "w-2/12 h-9 rounded-lg",
           style: { backgroundColor: color[2] || "" },
         }),
         createElement("div", {
-          className: "w-9 h-9 rounded-lg",
+          className: "w-2/12 h-9 rounded-lg",
           style: { backgroundColor: color[3] || "" },
         }),
         createElement("div", {
-          className: "w-9 h-9 rounded-lg",
+          className: "w-2/12 h-9 rounded-lg",
           style: { backgroundColor: color[4] || "" },
         })
       )
