@@ -223,6 +223,18 @@ function GalleryPalettes() {
           onPaletteSelect4={setSelectedPaletteColor4}
           onPaletteSelect5={setSelectedPaletteColor5}
         />
+        <Palette
+          color1={"965E26"}
+          color2={"E4BC94"}
+          color3={"D49453"}
+          color4={"F2E0CC"}
+          color5={"#FAF2EA"}
+          onPaletteSelect1={setSelectedPaletteColor1}
+          onPaletteSelect2={setSelectedPaletteColor2}
+          onPaletteSelect3={setSelectedPaletteColor3}
+          onPaletteSelect4={setSelectedPaletteColor4}
+          onPaletteSelect5={setSelectedPaletteColor5}
+        />
       </div>
     </div>
   );
