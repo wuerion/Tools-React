@@ -52,6 +52,26 @@ function fontsPage() {
           nameFont={"Borel"}
           onFontSelect={setSelectedFont}
         />
+        <Fonts
+          font={"Antic"}
+          nameFont={"Antic"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"Story Script"}
+          nameFont={"Story Script"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"Google Sans Code"}
+          nameFont={"Google Sans Code"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"DM Serif Text"}
+          nameFont={"DM Serif Text"}
+          onFontSelect={setSelectedFont}
+        />
       </div>
     </div>
   );
