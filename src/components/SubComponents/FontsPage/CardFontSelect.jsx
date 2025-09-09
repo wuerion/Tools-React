@@ -14,7 +14,7 @@ function CardFontSelect({ font, nameFont }) {
     <div className="bg-linear-180 from-[#1D1D1D] to-[#DDDAD8] dark:from-[#FFFFFF] dark:to-[#1D1D1D] p-[1px] my-5 ">
       {notification && <Notification text={"Font copied"} />}
       <div className="bg-[#DDDAD8] dark:bg-[#1D1D1D] flex flex-col items-center justify-center gap-4 h-full text-[#181818] dark:text-[#DDDAD8] p-2">
-        <div className="bg-[#f2f2f2] dark:bg-white/30 w-full flex justify-between rounded-tl-4xl rounded-lg  gap-2 pr-2 shadow-[0_4px_2px_#DAD7D5] dark:shadow-[0_4px_2px_#181818]">
+        <div className="bg-[#f2f2f2] dark:bg-white/30 w-full lg:w-1/2 flex justify-between rounded-tl-4xl rounded-lg  gap-2 pr-2 shadow-[0_4px_2px_#DAD7D5] dark:shadow-[0_4px_2px_#181818]">
           <div className="w-full">
             <input
               type="text"
@@ -83,7 +83,7 @@ function CardFontSelect({ font, nameFont }) {
           </div>
         </div>
         <div className="w-full">
-          <p className="text-start text-[#181818] dark:text-[#DDDAD8]">
+          <p className="text-start lg:text-xl lg:text-center text-[#181818] dark:text-[#DDDAD8]">
             {nameFont || "Font"}:
             <span className={"ml-1.5"} style={{ fontFamily: `${font} ` }}>
               {text || "Hello World"}{" "}
