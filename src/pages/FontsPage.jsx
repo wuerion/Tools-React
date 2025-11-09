@@ -72,6 +72,16 @@ function fontsPage() {
           nameFont={"DM Serif Text"}
           onFontSelect={setSelectedFont}
         />
+        <Fonts
+          font={"MuseoModerno"}
+          nameFont={"MuseoModerno"}
+          onFontSelect={setSelectedFont}
+        />
+        <Fonts
+          font={"Playpen Sans"}
+          nameFont={"Playpen Sans"}
+          onFontSelect={setSelectedFont}
+        />
       </div>
     </div>
   );
